@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../../../js/jquery-1.12.3.min.js"></script>
+</head>
+<style>
+	* { margin: 0; padding: 0; }
+	html, body { width: 100%; }
+	.warp { width: 1200px; margin: 0 auto; position: relative;}
+	.warp:after { content: ''; display: table; clear: both; }
+	.mc-cqp { background: rgba(109, 109, 109, 1); float: left; color: #fed; text-align: center; vertical-align: middle; position: absolute; display: table; border-radius: 2px; cursor: pointer;}
+	.mc-cqp:not(.draging) {
+		transition-duration: .4s;
+		-webkit-transition-duration: .4s;
+	}
+	.mc-cqp span { vertical-align: middle; display: table-cell; }
+	.mc-cqp:nth-child(8n+1) { margin-left: 0; }
+	
+	.chooseColor span {
+		bottom: 0px;
+		transition: all 1.0s;
+		-webkit-transition: all 1.0s;
+	}
+	.chooseColor span:hover {
+		transition: all .1s;
+		-webkit-transition: all .1s;
+		height: calc(100% + 20px) !important;
+		box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+		-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+	}
+</style>
+<body>
+	<div class="warp" id="mc-dragWarp">
+		<div class="mc-cqp mc-cqp-1"><span>I was first one</span></div>
+		<div class="mc-cqp mc-cqp-2"><span>I was second one</span></div>
+		<div class="mc-cqp mc-cqp-3"><span>I was third one</span></div>
+		<div class="mc-cqp mc-cqp-4"><span>I was fourth one</span></div>
+		<div class="mc-cqp mc-cqp-5"><span>I was fifth one</span></div>
+		<div class="mc-cqp mc-cqp-6"><span>I was sixth one</span></div>
+		<div class="mc-cqp mc-cqp-7"><span>I was seventh one</span></div>
+		<div class="mc-cqp mc-cqp-8"><span>I was eighth one</span></div>
+		<div class="mc-cqp mc-cqp-9"><span>I was ninth one</span></div>
+		<div class="mc-cqp mc-cqp-10"><span>I was tenth</span></div>
+		<div class="mc-cqp mc-cqp-11"><span>I was eleventh</span></div>
+		<div class="mc-cqp mc-cqp-12"><span>I was twelfth</span></div>
+		<div class="mc-cqp mc-cqp-13"><span>I was thirteenth</span></div>
+		<div class="mc-cqp mc-cqp-14"><span>I was fourteenth</span></div>
+		<div class="mc-cqp mc-cqp-15"><span>I was fifteenth</span></div>
+		<div class="mc-cqp mc-cqp-16"><span>I was sixteenth</span></div>
+		<div class="mc-cqp mc-cqp-17"><span>I was seventeenth</span></div>
+		<div class="mc-cqp mc-cqp-18"><span>I was eighteenth</span></div>
+		<div class="mc-cqp mc-cqp-19"><span>I was nineteenth</span></div>
+		<div class="mc-cqp mc-cqp-20"><span>I was twentieth</span></div>
+	</div>
+</body>
+<script type="text/javascript" src="mousedrag.js"></script>
+</html>
