@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<style type="text/css" rel="stylesheet" href="style.css"></style>
-	<script type="text/javascript" src="jquery-1.12.3.min.js"></script>
-	<script type="text/javascript" src="mousedrag.js"></script>
+	<link rel="stylesheet" href="src/style.css">
+	<script type="text/javascript" src="dist/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="src/mousedrag.js"></script>
 </head>
 <body>
 	<div class="warp" id="mc-dragWarp">
@@ -31,4 +31,7 @@
 		<div class="mc-cqp mc-cqp-20"><span>I was twentieth</span></div>
 	</div>
 </body>
+<script>
+	$(document).dragcopy();
+</script>
 </html>

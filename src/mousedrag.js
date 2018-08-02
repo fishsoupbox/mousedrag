@@ -4,7 +4,7 @@
 
 	$.fn.dragcopy = function(options){
 
-		// object for window
+		// object for all
 		var f = $;
 		var self = f(this);
 
@@ -30,12 +30,12 @@
 		var setClass = '.itemColor itemColor-';
 		var specialClass = setClass+'0';
 
-		$.extend({},options);
+		f.extend({},options);
 
 		init();
 
 		if(pointJudge){
-			var chooseColor = $('<div></div>')
+			var chooseColor = f('<div></div>')
 								.addClass('chooseColor')
 									.css({
 										'position' : 'fixed',
@@ -43,7 +43,7 @@
 										'height' : pointsize,
 										'right' : '10px',
 										'bottom' : '10px'});
-			var specialColor = $('<span></span>')
+			var specialColor = f('<span></span>')
 								.addClass(specialClass)
 									.css({
 										'position' : 'absolute',
@@ -57,7 +57,7 @@
 			
 			for (let i = 0; i < colorLst.length; i++) {
 				(function(){
-					$('<span></span>')
+					f('<span></span>')
 							.addClass(setClass+i)
 								.css({
 									'position' : 'absolute',
@@ -112,7 +112,7 @@
 			})
 
 			cqp.each(function(index, cur){
-				let self = $(this);
+				let self = f(this);
 				let row  = Math.floor(index / boxnum);
 				let cell = index % boxnum;
 
@@ -130,22 +130,22 @@
 
 			cqp.on('mousedown', function(ev){
 				//控制对象
-				let self = $(this);
+				let self = f(this);
 				//获取当前点击位置
 				distanceY = ev.pageY - parseInt(self.css('top'));
 				distanceX = ev.pageX - parseInt(self.css('left'));
 
-				doc.on('mousemove', $(this), silder.drag).on('mouseup', $(this), silder.drop);
+				doc.on('mousemove', f(this), silder.drag).on('mouseup', f(this), silder.drop);
 
 				ev.preventDefault();
 			});
 		}
 
 		function changeColor(ev){
-			let self = $(this);
+			let self = f(this);
 			if(self.css('backgroundImage') != 'none'){
 				cqp.each(function(index){
-					$(this).css('backgroundColor', colorLst[index]);
+					f(this).css('backgroundColor', colorLst[index]);
 				})
 			}else {
 				cqp.css('backgroundColor', self.css('backgroundColor'));
@@ -154,5 +154,3 @@
 	}
 
 })();
-
-$(document).dragcopy();
